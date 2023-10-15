@@ -1,28 +1,41 @@
-# React + TypeScript + Vite
+Hjemmeoppgave: Brukerprofiler 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ 
 
-Currently, two official plugins are available:
+Mål: 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Lag en webapplikasjon som lister opp en rekke brukere. Følgende API-kall lister opp 30 brukerprofiler som du skal bruke i applikasjonen:  
 
-## Expanding the ESLint configuration
+https://randomuser.me/api/?results=30&seed=aboveit&exc=login 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+ 
 
-- Configure the top-level `parserOptions` property like this:
+Applikasjonen skal liste opp brukere med bilde, navn, alder og annen informasjon du finner relevant. Når det trykkes på en bruker, skal brukerprofilen vises med mer detaljert informasjon om brukeren. Det skal også være mulig å registrere seg som bruker. En ny registrert bruker skal dukke opp øverst i listen. 
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+ 
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# aboveit-oppgave
+Krav: 
+
+ 
+
+Brukergrensesnitt (GUI): Webapplikasjonen skal ha et rent og brukervennlig grensesnitt. Du kan bruke teknologier som HTML5, CSS3, JavaScript, React, Angular, Vue.js, eller andre teknologier du er komfortabel med. 
+
+ 
+
+API-integrasjon: Bruk API-kallet for å hente ut en liste med 30 brukerprofiler.  
+
+ 
+
+Registrering av nye brukere: Webapplikasjonen skal ha et brukervennlig skjema for å registrere nye brukere. Når en bruker er registrert, skal den legges til i listen over brukerprofiler (du kan lagre dette lokalt i staten i din webapplikasjon). 
+
+ 
+
+Vise detaljert brukerprofil: Når man trykker på en bruker skal brukerprofilen med detaljert informasjon om brukeren vises. 
+
+ 
+
+Responsivt design: Webapplikasjonen skal være responsiv og kunne vises korrekt på ulike skjermstørrelser. 
+
+ 
+
+Testing: Test at applikasjonen virker på moderne nettlesere (Chrome, Edge, Firefox, etc.) 
