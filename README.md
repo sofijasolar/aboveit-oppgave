@@ -39,3 +39,11 @@ Responsivt design: Webapplikasjonen skal være responsiv og kunne vises korrekt 
  
 
 Testing: Test at applikasjonen virker på moderne nettlesere (Chrome, Edge, Firefox, etc.) 
+
+
+Utfordringer:
+
+- rakk ikke å fikse gridview for å vise brukere, så brukte kun en liste
+- rakk ikke å fikse detaljert brukerprofil
+- fikk noen utfordringer med å legge til en ny bruker 
+- formen på add new user er synlig nå, men funker ikke

@@ -4,7 +4,7 @@ import UserContext, { IUserContext } from "../../context/UserContext";
 
 const AddNewUserForm : React.FC = () => {
 
-    const {addNewUser: contextAddNewUser} = useContext(UserContext) as IUserContext;
+    // const {addNewUser: contextAddNewUser} = useContext(UserContext) as IUserContext;
 
     const [firstName, setFirstName] = useState<string>("");
     const [lastName, setLastName] = useState<string>("");
@@ -26,7 +26,7 @@ const AddNewUserForm : React.FC = () => {
                 setLastName(value);
             break;
             case "email":
-                setLastName(value);
+                setEmail(value);
             break;
             
         }
@@ -59,11 +59,7 @@ const AddNewUserForm : React.FC = () => {
             name: { first: firstName, last: lastName },
             email: email
         };
-        contextAddNewUser(newUser); // Use the context function
-    }
-
-    const refresh = () => {
-        window.location.reload();
+        // contextAddNewUser(newUser); // Use the context function
     }
 
     return (
@@ -71,16 +67,16 @@ const AddNewUserForm : React.FC = () => {
             <div className="">
                 <label  htmlFor="">First name: </label>
                 <div className="input-group">
-                    <input className="form-control" onChange={changeHandler} name="title" type="text" value={firstName} />
+                    <input className="form-control" placeholder="First name" onChange={changeHandler} name="firstName" type="text" value={firstName} />
                 </div>
             </div>
             <div>
                 <label htmlFor="">Last name: </label>
-                <input className="form-control" onChange={changeHandler} type="text" name="platform" id="" value={lastName}/>
+                <input className="form-control" placeholder="Last name" onChange={changeHandler} type="text" name="lastName" id="" value={lastName}/>
             </div>
             <div>
                 <label htmlFor="">Email: </label>
-                <input className="form-control" onChange={changeHandler} type="text" name="releaseYear" id="" value={email} />
+                <input className="form-control" placeholder="Email" onChange={changeHandler} type="text" name="email" id="" value={email} />
             </div>
             
             {/* <div>
@@ -89,9 +85,7 @@ const AddNewUserForm : React.FC = () => {
             </div> */}
             <div className="mt-2">
                 <button onClick={addNewUserToContext} className="btn btn-outline-dark me-2 ">Add game</button>
-                <button onClick={refresh} className="btn btn-outline-dark">
-                {/* <FontAwesomeIcon icon="arrows-rotate" />   */}
-                    <span className="p-1"></span>Refresh</button>
+                
             </div>
         </section>
     )
